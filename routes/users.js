@@ -9,7 +9,7 @@ router.post('/:userid', function(req, res, next) {
   res.send('here are some users');
 });
 
-// a route that gets me all users
+// a route that gets all users
 router.get('/', (req, res, next) => {
   // route needs to end res.send, res.extended
   // use knex to get all users
