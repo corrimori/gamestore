@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Static Page</title>
+    <link rel='stylesheet' href-'/stylesheets/style.css'/>
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      console.log("DOM content fully loaded and parsed")
+      fetch('/users')
+        .then((response) => {
+          return response.json();
+        })
+        .then((myUsers) => {
+          console.log(myUsers);
+          // represents success
+          // DOM manipulation
+          let ul = document.getElementById('userList')
+          for (user of myUsers) {
+            let li = document.createElement('li')
+            li.innerText = user.name
+            ul.appendChild(li)
+          }
+      });
+    })
+    </script>
+  </head>
+  <body>
+    <h1>STATIC PAGE</h1>
+    <p>Welcome to Static Page</p>
+    <div id-"userList">
+    </div>
+  </body>
+</html>

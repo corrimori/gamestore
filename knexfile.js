@@ -3,7 +3,8 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://postgres:bluebear@localhost/gamestore_dev'
+    connection: 'postgres://localhost/gamestore_dev'
+    // connection: 'postgres://postgres:brownbear@localhost/knexwarmup_dev
   },
 
   test: {
